@@ -1,14 +1,14 @@
 # Ansible: Configuration & system management
 
 ```
- ansible/
-    ├── roles/          # Roles Ansible reutilizables
-    ├── inventories/    # Inventarios organizados por entorno
+ansible/
+    ├── roles/          # Reusable Ansible roles
+    ├── inventories/    # Inventories organized by environment
     │   ├── dev
     │   └── prod
-    ├── playbooks/      # Playbooks para ejecución de Ansible
+    ├── playbooks/      # Playbooks for running Ansible
     │   ├── setup.yml
     │   └── deploy.yml
-    ├── vars/           # Variables globales de Ansible
-    └── README.md       # Documentación del uso de Ansible
+    ├── vars/           # Global Ansible variables
+    └── README.md       # Documentation for using Ansible
 ```
