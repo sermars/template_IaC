@@ -1,14 +1,16 @@
-name: Terraform CI/CD
+name: [EXAMPLE] Terraform CI/CD
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "terraform/**"
-  pull_request:
-    branches: [main]
-    paths:
-      - "terraform/**"
+  workflow_dispatch:
+    
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - "terraform/**"
+  # pull_request:
+  #   branches: [main]
+  #   paths:
+  #     - "terraform/**"
 
 jobs:
   terraform:
