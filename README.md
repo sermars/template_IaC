@@ -64,7 +64,13 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li>
+      <a href="#contributing">Contributing</a>
+      <ul>
+        <li><a href="#repo-structure">Repo Structure</a></li>
+        <li><a href="#top-contributors">Top contributors</a></li>
+      </ul>
+    </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -218,7 +224,41 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Repo Structure
+
+```bash
+  template-IaC/
+    │── ansible/
+    │   ├── inventories/    # Inventories organized by environment
+    │   │   ├── dev/
+    │   │   └── prod/
+    │   ├── playbooks/      # Playbooks for Ansible execution
+    │   │   ├── setup.yml
+    │   │   └── deploy.yml
+    │   ├── vars/           # Global Ansible variables
+    │   ├── roles/          # Reusable Ansible roles
+    │   └── README.md       # Documentation for Ansible usage
+    │
+    │── terraform/
+    │   ├── environments/    # Environment-specific configuration (dev, prod)
+    │   │   ├── dev.tfvars
+    │   │   └── prod.tfvars
+    │   ├── modules/        # Reusable Terraform modules
+    │   ├── backend.tf      # Backend configuration for remote state
+    │   ├── main.tf         # General infrastructure definition
+    │   ├── outputs.tf      # Definition of relevant outputs
+    │   ├── (terraform.tfstate) # State file (should not be versioned)
+    │   ├── README.md       # Documentation for Terraform usage
+    │   └── variables.tf    # Global variables for Terraform
+    │
+    │── images/             # Images for documentation
+    │── scripts/            # Helper scripts (automation, validations)
+    │── .github/            # GitHub Actions workflows for CI/CD
+    │   └── workflows/
+    │── LICENSE             # License file for the project
+    └── README.md           # General repository explanation
+```
 
 ### Top contributors:
 
@@ -226,7 +266,7 @@ Don't forget to give the project a star! Thanks again!
   <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
 </a>
 
-
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 ## License
